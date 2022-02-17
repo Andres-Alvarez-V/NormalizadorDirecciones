@@ -1,0 +1,40 @@
+#Ignoramos este archivo debido que es muy pesado para estar subiendolo a un repositorio entonces queda mas fatible que cuando se vaya a usar localmente se descargue desde la documentacion esta informacion adicional
+dataLibPostal/ 
+
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/venv,pydev,jupyternotebooks
+# Edit at https://www.toptal.com/developers/gitignore?templates=venv,pydev,jupyternotebooks
+
+### JupyterNotebooks ###
+# gitignore template for Jupyter Notebooks
+# website: http://jupyter.org/
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Remove previous ipynb_checkpoints
+#   git rm -r .ipynb_checkpoints/
+
+### pydev ###
+.pydevproject
+
+### venv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
+# End of https://www.toptal.com/developers/gitignore/api/venv,pydev,jupyternotebooks
