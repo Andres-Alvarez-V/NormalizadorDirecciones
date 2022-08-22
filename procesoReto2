@@ -1,0 +1,38 @@
+Antes de comenzar debemos usar submodules para no estar tranfiriendo el otro repo
+
+1. como utilizar sub modules:
+	http://techdencias.net/2018/10/16/git-sub-modules/#:~:text=Un%20Submodule%20es%20el%20mecanismo,al%20secundario%20sin%20tener%20que
+
+
+Installation of openvenues en ubuntu.
+
+1.    On Ubuntu/Debian
+
+	sudo apt-get install curl autoconf automake libtool python-dev pkg-config
+	
+2.	Installing libpostal
+
+		git clone https://github.com/openvenues/libpostal  - en lugar de este comando podemos usar git submodule add https://github.com/openvenues/libpostal
+		cd libpostal
+		./bootstrap.sh
+		./configure --datadir=[...some dir with a few GB of space...]
+		make
+		sudo make install
+	
+		# On Linux it's probably a good idea to run
+		sudo ldconfig
+	
+	
+3. Creo entorno virtual
+	 python3 -m venv venv
+	 source ./venv/bin/activate
+4. instalo la libreria de postal
+	pip install postal
+	
+5. En caso de obtener el siguiente error: 
+		from postal import _expand
+		ImportError: libpostal.so.1: cannot open shared object file: No such file or directory
+	-Para solucionar esto se debe definir una variable de entorno. Con el siguiente comando: export LD_LIBRARY_PATH=/usr/local/lib
+	
+
+
